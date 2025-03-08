@@ -15,7 +15,7 @@ class Trainer:
 
     def load_questions(self):
         with open(f"{script_prefix}/../banks/{self.bank}.yaml", "r", encoding="utf-8") as file:
-            return yaml.load(file)
+            return yaml.load(file, Loader=yaml.SafeLoader)
 
     def ask_question(self):
         question = random.choice(self.questions["general"])
