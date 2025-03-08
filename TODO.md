@@ -18,6 +18,8 @@ TODO:
 - [ ] help command
 - [ ] multiple banks and difficulties in one session
 - [ ] categories of banks
+- [ ] subbanks
+- [ ] short forms of flags (e.g. -l for --language)
 - [ ] print all commands bank
 - [ ] user categories
 - [ ] printing stats

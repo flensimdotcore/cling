@@ -5,20 +5,21 @@ import os
 script_prefix = os.path.dirname(os.path.abspath(__file__))
 
 class Trainer:
-    def __init__(self, bank, difficulty):
+    def __init__(self, bank, difficulty, language):
         self.bank = bank
         self.difficulty = difficulty
+        self.language = language
         self.questions = self.load_questions()
         self.correct_answers = 0
         self.total_questions = 0
 
     def load_questions(self):
-        with open(f"{script_prefix}/../banks/questions_{self.bank}.yaml", "r", encoding="utf-8") as file:
+        with open(f"{script_prefix}/../banks/{self.bank}.yaml", "r", encoding="utf-8") as file:
             return yaml.load(file)
 
     def ask_question(self):
-        question = random.choice(self.questions["questions"])
-        print(f"Question: {question['question']}")
+        question = random.choice(self.questions["general"])
+        print(f"Question: {question[self.language]}")
         user_input = input("Enter your command: ").strip()
 
         if user_input in question["answers"]:
