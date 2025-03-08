@@ -19,7 +19,7 @@ class Trainer:
 
     def ask_question(self):
         question = random.choice(self.questions["general"])
-        print(f"Question: {question[self.language]}")
+        print(f"Question: {question['language'][self.language]}")
         user_input = input("Enter your command: ").strip()
 
         if user_input in question["answers"]:
