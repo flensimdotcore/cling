@@ -1,0 +1,18 @@
+general:
+  - question:
+    difficulty: easy
+    language:
+      en: "How to create a new branch 'example/new_branch' in Git?"
+      ru: "Как создать новую ветку 'example/new_branch' в Git?"
+    answers:
+      - "git branch example/new_branch"
+      - "git checkout -b example/new_branch"
+      - "git switch -c example/new_branch"
+
+  - question:
+    difficulty: easy
+    language:
+      en: "How to show changes in repository in Git?"
+      ru: "Как показать изменения в репозитории в Git?"
+    answers:
+      - "git status"

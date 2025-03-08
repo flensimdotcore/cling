@@ -1,0 +1,29 @@
+TODO:
+- [ ] README
+- [ ] 'git' commands bank expansion (to 15 questions)
+- [ ] 'linux' commands bank
+- [ ] 'ubuntu' commands bank
+- [ ] 'ros2' commands bank
+- [ ] 'python' commands bank
+- [ ] 'docker' commands bank
+- [ ] 'kubectl' commands bank
+- [ ] 'ansible' commands bank
+- [ ] 'mikrotik' commands bank
+- [ ] 'go' commands bank
+- [ ] 'podman' commands bank
+- [ ] 'gitlab-runner' commands bank
+- [ ] python package distribution
+- [ ] deb package distribution
+- [x] multilanguage support
+- [ ] help command
+- [ ] multiple banks and difficulties in one session
+- [ ] categories of banks
+- [ ] subbanks
+- [ ] short forms of flags (e.g. -l for --language)
+- [ ] print all commands bank
+- [ ] user categories
+- [ ] printing stats
+- [ ] config files (preferences, e.g. used banks, amount of questions)
+- [ ] coloring in console
+- [ ] unit tests
+- [ ] ci pipeline
