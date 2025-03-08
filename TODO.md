@@ -14,7 +14,7 @@ TODO:
 - [ ] 'gitlab-runner' commands bank
 - [ ] python package distribution
 - [ ] deb package distribution
-- [ ] multilanguage support
+- [x] multilanguage support
 - [ ] help command
 - [ ] multiple banks and difficulties in one session
 - [ ] categories of banks

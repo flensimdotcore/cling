@@ -19,9 +19,13 @@ class Trainer:
 
     def ask_question(self):
         question = random.choice(self.questions["general"])
-        print(f"Question: {question['language'][self.language]}")
-        user_input = input("Enter your command: ").strip()
+        if self.language in question['language']:
+            question_text = question['language'][self.language]
+        else:
+            question_text = question['language']['en']
+        print(f"Question: {question_text}")
 
+        user_input = input("Enter your command: ").strip()
         if user_input in question["answers"]:
             print("Correct!\n")
             self.correct_answers += 1
