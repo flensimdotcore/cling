@@ -1,5 +1,7 @@
 questions:
-  - question: "How to create a new branch 'example/new_branch' in Git?"
+  - question:
+    en: "How to create a new branch 'example/new_branch' in Git?"
+    ru: "Как создать новую ветку 'example/new_branch' в Git?"
     answers:
       - "git branch example/new_branch"
       - "git checkout -b example/new_branch"
