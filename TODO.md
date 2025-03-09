@@ -16,7 +16,7 @@ TODO:
 - [ ] deb package distribution
 - [x] multilanguage support
 - [ ] help command
-- [ ] multiple banks and difficulties in one session
+- [x] multiple banks and difficulties in one session
 - [x] categories of banks
 - [x] subbanks
 - [ ] short forms of flags (e.g. -l for --language)

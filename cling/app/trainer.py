@@ -19,7 +19,6 @@ class Trainer:
 
     def load_banks(self, user_banks):
         banks = []
-        print(self.categories)
         if self.categories not in ['none']:
             for category in self.categories:
                 try:
