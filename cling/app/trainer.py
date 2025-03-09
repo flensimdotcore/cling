@@ -3,22 +3,40 @@ import random
 import os
 
 script_prefix = os.path.dirname(os.path.abspath(__file__))
+banks_prefix = f'{script_prefix}/../res/banks/'
 
 class Trainer:
-    def __init__(self, bank, difficulty, language):
-        self.bank = bank
-        self.difficulty = difficulty
+    def __init__(self, bank, difficulty, language, subbank, category):
+        self.banks = bank
+        self.subbanks = subbank
+        self.categories = category
+        self.difficulties = difficulty
         self.language = language
         self.questions = self.load_questions()
         self.correct_answers = 0
         self.total_questions = 0
 
     def load_questions(self):
-        with open(f"{script_prefix}/../banks/{self.bank}.yaml", "r", encoding="utf-8") as file:
-            return yaml.load(file, Loader=yaml.SafeLoader)
+        questions = []
+        for bank in self.banks:
+            try:
+                with open(f"{banks_prefix}{bank}.yaml", "r", encoding="utf-8") as file:
+                    data = yaml.load(file, Loader=yaml.SafeLoader)
+                    questions.extend(data['questions'])
+            except FileNotFoundError:
+                print(f"Bank {bank} not found")
+            except yaml.YAMLError as e:
+                print(f"Error {e} in {bank}.yaml file")
+
+        filtered_questions = [
+            q for q in questions if q.get("subbank") in self.subbanks and q.get("difficulty") in self.difficulties
+        ]
+
+        return filtered_questions
 
     def ask_question(self):
-        question = random.choice(self.questions["general"])
+        question = random.choice(self.questions)
+
         if self.language in question['language']:
             question_text = question['language'][self.language]
         else:
