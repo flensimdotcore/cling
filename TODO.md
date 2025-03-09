@@ -16,9 +16,9 @@ TODO:
 - [ ] deb package distribution
 - [x] multilanguage support
 - [ ] help command
-- [ ] multiple banks and difficulties in one session
-- [ ] categories of banks
-- [ ] subbanks
+- [x] multiple banks and difficulties in one session
+- [x] categories of banks
+- [x] subbanks
 - [ ] short forms of flags (e.g. -l for --language)
 - [ ] print all commands bank
 - [ ] user categories
@@ -27,3 +27,7 @@ TODO:
 - [ ] coloring in console
 - [ ] unit tests
 - [ ] ci pipeline
+- [ ] coverage calculation
+- [ ] license
+- [ ] restrict branch rules
+- [ ] feature->dev->master branches flow
