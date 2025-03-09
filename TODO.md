@@ -27,4 +27,7 @@ TODO:
 - [ ] coloring in console
 - [ ] unit tests
 - [ ] ci pipeline
+- [ ] coverage calculation
+- [ ] license
+- [ ] restrict branch rules
 - [ ] feature->dev->master branches flow
