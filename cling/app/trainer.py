@@ -4,17 +4,36 @@ import os
 
 script_prefix = os.path.dirname(os.path.abspath(__file__))
 banks_prefix = f'{script_prefix}/../res/banks/'
+categories_prefix = f'{script_prefix}/../res/categories/'
 
 class Trainer:
-    def __init__(self, bank, difficulty, language, subbank, category):
-        self.banks = bank
-        self.subbanks = subbank
-        self.categories = category
-        self.difficulties = difficulty
+    def __init__(self, banks, difficulties, language, subbanks, categories):
+        self.subbanks = subbanks
+        self.categories = categories
+        self.difficulties = difficulties
         self.language = language
+        self.banks = self.load_banks(banks)
         self.questions = self.load_questions()
         self.correct_answers = 0
         self.total_questions = 0
+
+    def load_banks(self, user_banks):
+        banks = []
+        print(self.categories)
+        if self.categories not in ['none']:
+            for category in self.categories:
+                try:
+                    with open(f'{categories_prefix}{category}.yaml', 'r', encoding='utf-8') as file:
+                        data = yaml.safe_load(file)
+                        banks.extend([bank['name'] for bank in data.get('banks', [])])
+                except FileNotFoundError:
+                    print(f"Category {category} not found")
+                except yaml.YAMLError as e:
+                    print(f"Error {e} in {category}.yaml file")
+        else:
+            banks = user_banks
+
+        return banks
 
     def load_questions(self):
         questions = []
