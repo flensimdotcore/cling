@@ -1,5 +1,5 @@
 TODO:
-- [ ] README
+- [x] README
 - [ ] 'git' commands bank expansion (to 15 questions)
 - [ ] 'linux' commands bank
 - [ ] 'ubuntu' commands bank
@@ -20,7 +20,7 @@ TODO:
 - [x] categories of banks
 - [x] subbanks
 - [ ] short forms of flags (e.g. -l for --language)
-- [ ] print all commands bank
+- [ ] print all commands from bank
 - [ ] user categories
 - [ ] printing stats
 - [ ] config files (preferences, e.g. used banks, amount of questions)
