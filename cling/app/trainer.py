@@ -1,6 +1,7 @@
 import yaml
 import random
 import os
+from termcolor import colored
 
 script_prefix = os.path.dirname(os.path.abspath(__file__))
 banks_prefix = f'{script_prefix}/../res/banks/'
@@ -26,9 +27,9 @@ class Trainer:
                         data = yaml.safe_load(file)
                         banks.extend([bank['name'] for bank in data.get('banks', [])])
                 except FileNotFoundError:
-                    print(f"Category {category} not found")
+                    print(colored(f"Category {category} not found", "red"))
                 except yaml.YAMLError as e:
-                    print(f"Error {e} in {category}.yaml file")
+                    print(colored(f"Error {e} in {category}.yaml file", "red"))
         else:
             banks = user_banks
 
@@ -42,9 +43,9 @@ class Trainer:
                     data = yaml.load(file, Loader=yaml.SafeLoader)
                     questions.extend(data['questions'])
             except FileNotFoundError:
-                print(f"Bank {bank} not found")
+                print(colored(f"Bank {bank} not found", "red"))
             except yaml.YAMLError as e:
-                print(f"Error {e} in {bank}.yaml file")
+                print(colored(f"Error {e} in {bank}.yaml file", "red"))
 
         filtered_questions = [
             q for q in questions if q.get("subbank") in self.subbanks and q.get("difficulty") in self.difficulties
@@ -59,18 +60,23 @@ class Trainer:
             question_text = question['language'][self.language]
         else:
             question_text = question['language']['en']
-        print(f"Question: {question_text}")
+        print(colored(f"Question: {question_text}", "white"))
 
-        user_input = input("Enter your command: ").strip()
+        user_input = input(colored("cling@cling:", "green") + colored("~/cling", "blue") + '$ ').strip()
         if user_input in question["answers"]:
-            print("Correct!\n")
+            print(colored("Correct!\n", "green"))
             self.correct_answers += 1
         else:
-            print(f"Wrong! Correct answers: {', '.join(question['answers'])}\n")
+            print(colored(f"Wrong! Correct answers: {', '.join(question['answers'])}\n", "red"))
 
         self.total_questions += 1
 
     def start_session(self, repeat):
+        os.system('clear')
         for _ in range(repeat):
             self.ask_question()
-        print(f"Your result: {self.correct_answers}/{self.total_questions} correct answers.")
+        result_color = "red"
+        if self.correct_answers >= self.total_questions / 2:
+            result_color = "green"
+        os.system('clear')
+        print(colored(f"Your result: {self.correct_answers}/{self.total_questions} correct answers.", result_color))
