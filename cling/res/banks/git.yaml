@@ -2,12 +2,12 @@ questions:
   - subbank: general
     difficulty: easy
     language:
-      en: "How to create a new branch 'example/new_branch' in Git?"
-      ru: "Как создать новую ветку 'example/new_branch' в Git?"
+      en: "How to create a new branch 'example/branch' in Git?"
+      ru: "Как создать новую ветку 'example/branch' в Git?"
     answers:
-      - "git branch example/new_branch"
-      - "git checkout -b example/new_branch"
-      - "git switch -c example/new_branch"
+      - "git branch example/branch"
+      - "git checkout -b example/branch"
+      - "git switch -c example/branch"
 
   - subbank: general
     difficulty: easy
@@ -16,3 +16,61 @@ questions:
       ru: "Как показать изменения в репозитории в Git?"
     answers:
       - "git status"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to add all changes to staging in Git?"
+      ru: "Как добавить все изменения в индекс (staging) в Git?"
+    answers:
+      - "git add ."
+      - "git add -A"
+      - "git add *"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to commit changes with message 'example' in Git?"
+      ru: "Как закоммитить изменения в Git?"
+    answers:
+      - "git commit -m 'example'"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to view the commit history in Git?"
+      ru: "Как просмотреть историю коммитов в Git?"
+    answers:
+      - "git log"
+      - "git log --oneline"
+      - "git log --graph"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to merge a branch 'example/branch' into the current branch in Git?"
+      ru: "Как объединить ветку 'example/branch' в текущую ветку в Git?"
+    answers:
+      - "git merge example/branch"
+      - "git merge --no-ff example/branch"
+      - "git merge --squash example/branch"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to delete a branch 'example/branch' in Git?"
+      ru: "Как удалить ветку 'example/branch' в Git?"
+    answers:
+      - "git branch -d example/branch"
+      - "git branch -D example/branch"
+      - "git branch --delete example/branch"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to check out a remote branch 'example/branch' in Git?"
+      ru: "Как переключиться на удалённую ветку 'example/branch' в Git?"
+    answers:
+      - "git checkout example/branch"
+      - "git checkout -t origin/example/branch"
+      - "git switch example/branch"
