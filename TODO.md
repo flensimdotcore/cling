@@ -1,17 +1,19 @@
 TODO release v1.0:
 - [x] README
-- [x] 'git' commands bank expansion (to 15 questions)
-- [ ] 'linux' commands bank
-- [ ] 'ubuntu' commands bank
-- [ ] 'ros2' commands bank
-- [ ] 'python' commands bank
-- [ ] 'docker' commands bank
-- [ ] 'kubectl' commands bank
-- [ ] 'ansible' commands bank
-- [ ] 'mikrotik' commands bank
-- [ ] 'go' commands bank
-- [ ] 'podman' commands bank
-- [ ] 'gitlab-runner' commands bank
+- [ ] CHANGELOG
+- [x] 'git' bank expansion (to 15 questions)
+- [ ] 'ubuntu' bank
+- [ ] 'ros2' bank
+- [ ] 'python' bank
+- [ ] 'docker' bank
+- [ ] 'kubectl' bank
+- [ ] 'ansible' bank
+- [ ] 'mikrotik' bank
+- [ ] 'go' bank
+- [ ] 'podman' bank
+- [ ] 'gitlab-runner' bank
+- [ ] 'openocd' bank
+- [ ] 'linux' category
 - [ ] python package distribution
 - [ ] deb package distribution
 - [x] multilanguage support
