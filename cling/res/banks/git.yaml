@@ -34,6 +34,7 @@ questions:
       ru: "Как закоммитить изменения в Git?"
     answers:
       - "git commit -m 'example'"
+      - "git commit -m \"example\""
 
   - subbank: general
     difficulty: easy
@@ -74,3 +75,70 @@ questions:
       - "git checkout example/branch"
       - "git checkout -t origin/example/branch"
       - "git switch example/branch"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to push changes to a remote repository on branch 'example/branch' in Git?"
+      ru: "Как отправить изменения в удалённый репозиторий в ветку 'example/branch' в Git?"
+    answers:
+      - "git push"
+      - "git push origin example/branch"
+      - "git push --set-upstream origin example/branch"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to revert a commit with hash 'commit_hash' in Git?"
+      ru: "Как откатить коммит с хэшом 'commit_hash' в Git?"
+    answers:
+      - "git revert commit_hash"
+      - "git reset --hard commit_hash"
+      - "git reset --soft commit_hash"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to show a list of files that have been modified in Git?"
+      ru: "Как показать список изменённых файлов в Git?"
+    answers:
+      - "git diff"
+      - "git diff --name-only"
+      - "git diff --stat"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to stash changes in Git?"
+      ru: "Как сохранить изменения с помощью стэша в Git?"
+    answers:
+      - "git stash"
+      - "git stash push"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to stash changes with message 'stash_message' in Git?"
+      ru: "Как сохранить изменения с помощью стэша с сообщением 'stash_message' в Git?"
+    answers:
+      - "git stash save 'stash_message'"
+      - "git stash save \"stash_message\""
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to apply stashed changes in Git?"
+      ru: "Как применить сохранённые изменения в Git?"
+    answers:
+      - "git stash apply"
+      - "git stash pop"
+      - "git stash apply stash@{0}"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to clone a remote repository with URL 'repo_url' in Git?"
+      ru: "Как клонировать удалённый репозиторий с URL 'repo_url' в Git?"
+    answers:
+      - "git clone repo_url"
+      - "git clone --recursive repo_url"

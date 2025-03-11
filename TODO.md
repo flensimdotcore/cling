@@ -1,6 +1,6 @@
-TODO:
+TODO release v1.0:
 - [x] README
-- [ ] 'git' commands bank expansion (to 15 questions)
+- [x] 'git' commands bank expansion (to 15 questions)
 - [ ] 'linux' commands bank
 - [ ] 'ubuntu' commands bank
 - [ ] 'ros2' commands bank
@@ -23,7 +23,7 @@ TODO:
 - [ ] print all commands from bank
 - [ ] user categories
 - [ ] printing stats
-- [ ] config files (preferences, e.g. used banks, amount of questions)
+- [ ] config files (preferences, e.g. used banks, amount of questions (yaml files inside usr/ dir))
 - [x] coloring in console
 - [ ] unit tests
 - [ ] ci pipeline
@@ -32,3 +32,5 @@ TODO:
 - [ ] restrict branch rules
 - [ ] feature->dev->master branches flow
 - [ ] motivational phrases in result
+- [ ] questions ids in yaml
+- [ ] rework random question selection (create a list of questions with length=repeat from all selected banks)
