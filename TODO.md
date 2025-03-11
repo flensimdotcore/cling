@@ -1,17 +1,19 @@
-TODO:
+TODO release v1.0:
 - [x] README
-- [ ] 'git' commands bank expansion (to 15 questions)
-- [ ] 'linux' commands bank
-- [ ] 'ubuntu' commands bank
-- [ ] 'ros2' commands bank
-- [ ] 'python' commands bank
-- [ ] 'docker' commands bank
-- [ ] 'kubectl' commands bank
-- [ ] 'ansible' commands bank
-- [ ] 'mikrotik' commands bank
-- [ ] 'go' commands bank
-- [ ] 'podman' commands bank
-- [ ] 'gitlab-runner' commands bank
+- [ ] CHANGELOG
+- [x] 'git' bank expansion (to 15 questions)
+- [ ] 'ubuntu' bank
+- [ ] 'ros2' bank
+- [ ] 'python' bank
+- [ ] 'docker' bank
+- [ ] 'kubectl' bank
+- [ ] 'ansible' bank
+- [ ] 'mikrotik' bank
+- [ ] 'go' bank
+- [ ] 'podman' bank
+- [ ] 'gitlab-runner' bank
+- [ ] 'openocd' bank
+- [ ] 'linux' category
 - [ ] python package distribution
 - [ ] deb package distribution
 - [x] multilanguage support
@@ -23,7 +25,7 @@ TODO:
 - [ ] print all commands from bank
 - [ ] user categories
 - [ ] printing stats
-- [ ] config files (preferences, e.g. used banks, amount of questions)
+- [ ] config files (preferences, e.g. used banks, amount of questions (yaml files inside usr/ dir))
 - [x] coloring in console
 - [ ] unit tests
 - [ ] ci pipeline
@@ -32,3 +34,5 @@ TODO:
 - [ ] restrict branch rules
 - [ ] feature->dev->master branches flow
 - [ ] motivational phrases in result
+- [ ] questions ids in yaml
+- [ ] rework random question selection (create a list of questions with length=repeat from all selected banks)
