@@ -1,0 +1,120 @@
+questions:
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to list all available ROS 2 nodes?"
+      ru: "Как вывести список всех доступных узлов в ROS 2?"
+    answers:
+      - "ros2 node list"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to display information about a specific ROS 2 node named 'robot_node'?"
+      ru: "Как вывести информацию о конкретном узле ROS 2 с именем 'robot_node'?"
+    answers:
+      - "ros2 node info robot_node"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to list all active topics in ROS 2?"
+      ru: "Как вывести список всех активных топиков в ROS 2?"
+    answers:
+      - "ros2 topic list"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to display information about a specific topic named '/cmd_vel' in ROS 2?"
+      ru: "Как вывести информацию о конкретном топике '/cmd_vel' в ROS 2?"
+    answers:
+      - "ros2 topic info /cmd_vel"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to publish a message to the topic '/cmd_vel' in ROS 2?"
+      ru: "Как опубликовать сообщение в топик '/cmd_vel' в ROS 2?"
+    answers:
+      - "ros2 topic pub /cmd_vel geometry_msgs/Twist '{linear: {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}'"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to echo messages from the topic '/scan' in ROS 2?"
+      ru: "Как вывести сообщения из топика '/scan' в ROS 2?"
+    answers:
+      - "ros2 topic echo /scan"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to list all available ROS 2 services?"
+      ru: "Как вывести список всех доступных сервисов в ROS 2?"
+    answers:
+      - "ros2 service list"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to call a service '/reset_odometry' in ROS 2?"
+      ru: "Как вызвать сервис '/reset_odometry' в ROS 2?"
+    answers:
+      - "ros2 service call /reset_odometry std_srvs/srv/Empty"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to list all available parameters of a node named 'robot_node' in ROS 2?"
+      ru: "Как вывести список всех доступных параметров узла 'robot_node' в ROS 2?"
+    answers:
+      - "ros2 param list robot_node"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to get the value of a parameter 'max_speed' from the node 'robot_node' in ROS 2?"
+      ru: "Как получить значение параметра 'max_speed' у узла 'robot_node' в ROS 2?"
+    answers:
+      - "ros2 param get robot_node max_speed"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to set a parameter 'max_speed' to 1.5 for the node 'robot_node' in ROS 2?"
+      ru: "Как установить параметр 'max_speed' в значение 1.5 для узла 'robot_node' в ROS 2?"
+    answers:
+      - "ros2 param set robot_node max_speed 1.5"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to record all ROS 2 topics to a bag file named 'data.bag'?"
+      ru: "Как записать все топики ROS 2 в файл bag с именем 'data.bag'?"
+    answers:
+      - "ros2 bag record -a -o data.bag"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to replay a ROS 2 bag file named 'data.bag'?"
+      ru: "Как воспроизвести файл bag с именем 'data.bag' в ROS 2?"
+    answers:
+      - "ros2 bag play data.bag"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to create a new ROS 2 package named 'my_robot' using C++?"
+      ru: "Как создать новый пакет ROS 2 с именем 'my_robot' на C++?"
+    answers:
+      - "ros2 pkg create --build-type ament_cmake my_robot"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to build a ROS 2 workspace located in '~/ros2_ws'?"
+      ru: "Как собрать рабочее пространство ROS 2, расположенное в '~/ros2_ws'?"
+    answers:
+      - "colcon build --base-paths ~/ros2_ws"
