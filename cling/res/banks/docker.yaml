@@ -1,0 +1,121 @@
+questions:
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to list all running containers in Docker?"
+      ru: "Как вывести список всех запущенных контейнеров в Docker?"
+    answers:
+      - "docker ps"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to list all containers, including stopped ones, in Docker?"
+      ru: "Как вывести список всех контейнеров, включая остановленные, в Docker?"
+    answers:
+      - "docker ps -a"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to start a stopped container with ID 'abc123' in Docker?"
+      ru: "Как запустить остановленный контейнер с ID 'abc123' в Docker?"
+    answers:
+      - "docker start abc123"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to stop a running container with ID 'abc123' in Docker?"
+      ru: "Как остановить запущенный контейнер с ID 'abc123' в Docker?"
+    answers:
+      - "docker stop abc123"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to remove a container with ID 'abc123' in Docker?"
+      ru: "Как удалить контейнер с ID 'abc123' в Docker?"
+    answers:
+      - "docker rm abc123"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to remove an image with ID 'abc123' in Docker?"
+      ru: "Как удалить образ с ID 'abc123' в Docker?"
+    answers:
+      - "docker rmi abc123"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to pull the latest 'example' image from Docker Hub?"
+      ru: "Как загрузить последний образ 'example' из Docker Hub?"
+    answers:
+      - "docker pull example:latest"
+      - "docker pull example"
+
+  - subbank: general
+    difficulty: easy
+    language:
+      en: "How to run a container with image 'example_image' and name 'example_name' in Docker?"
+      ru: "Как запустить контейнер с образом 'example_image' и именем 'example_name' в Docker?"
+    answers:
+      - "docker run --name example_name example_image"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to run a container in detached mode using image 'example_image'?"
+      ru: "Как запустить контейнер в фоновом режиме с образом 'example_image'?"
+    answers:
+      - "docker run -d example_image"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to execute an interactive Bash shell inside a running container with ID 'abc123'?"
+      ru: "Как выполнить интерактивную оболочку Bash внутри запущенного контейнера с ID 'abc123'?"
+    answers:
+      - "docker exec -it abc123 bash"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to view logs of a running container with ID 'abc123' in Docker?"
+      ru: "Как просмотреть логи запущенного контейнера с ID 'abc123' в Docker?"
+    answers:
+      - "docker logs abc123"
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to build a Docker image from a Dockerfile in the current directory with tag 'example:1.0'?"
+      ru: "Как собрать образ Docker из Dockerfile в текущей директории с тегом 'example:1.0'?"
+    answers:
+      - "docker build -t example:1.0 ."
+
+  - subbank: general
+    difficulty: medium
+    language:
+      en: "How to restart a running container with ID 'abc123' in Docker?"
+      ru: "Как перезапустить запущенный контейнер с ID 'abc123' в Docker?"
+    answers:
+      - "docker restart abc123"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to remove all stopped containers in Docker?"
+      ru: "Как удалить все остановленные контейнеры в Docker?"
+    answers:
+      - "docker container prune"
+
+  - subbank: general
+    difficulty: hard
+    language:
+      en: "How to remove all unused Docker images?"
+      ru: "Как удалить все неиспользуемые образы Docker?"
+    answers:
+      - "docker image prune -a"
