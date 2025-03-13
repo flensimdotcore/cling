@@ -5,7 +5,7 @@ TODO release v1.0:
 - [ ] 'ubuntu' bank
 - [ ] 'ros2' bank
 - [ ] 'python' bank
-- [ ] 'docker' bank
+- [x] 'docker' bank
 - [ ] 'kubectl' bank
 - [ ] 'ansible' bank
 - [ ] 'mikrotik' bank
