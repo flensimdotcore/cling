@@ -6,8 +6,15 @@ build-backend = "setuptools.build_meta"
 name = "cling"
 version = "0.1.0"
 description = "CLI training utility"
-authors = [{name = "Ivan Maraev", email = "flensim.core@yandex.ru}]
+authors = [
+    {name = "Ivan Maraev", email = "flensim.core@yandex.ru"}  # Исправлено: массив объектов
+]
 dependencies = []
 
 [project.scripts]
 cling = "cling.main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I"]
