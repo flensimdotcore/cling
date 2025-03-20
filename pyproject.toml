@@ -3,12 +3,13 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cling"
+name = "cling-trainer"
 version = "0.1.0"
 description = "CLI training utility"
 authors = [
-    {name = "Ivan Maraev", email = "flensim.core@yandex.ru"}  # Исправлено: массив объектов
+    {name = "Ivan Maraev", email = "flensim.core@yandex.ru"}
 ]
+readme = "README.md"
 dependencies = []
 
 [project.scripts]

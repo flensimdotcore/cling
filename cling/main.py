@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from app.trainer import Trainer, banks_prefix, categories_prefix
+from cling.app.trainer import Trainer, banks_prefix, categories_prefix
 
 
 def main():
