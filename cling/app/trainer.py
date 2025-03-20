@@ -7,6 +7,7 @@ script_prefix = os.path.dirname(os.path.abspath(__file__))
 banks_prefix = f'{script_prefix}/../res/banks/'
 categories_prefix = f'{script_prefix}/../res/categories/'
 
+
 class Trainer:
     def __init__(self, banks, difficulties, language, subbanks, categories):
         self.subbanks = subbanks
@@ -25,7 +26,8 @@ class Trainer:
                 try:
                     with open(f'{categories_prefix}{category}.yaml', 'r', encoding='utf-8') as file:
                         data = yaml.safe_load(file)
-                        banks.extend([bank['name'] for bank in data.get('banks', [])])
+                        banks.extend([bank['name']
+                                     for bank in data.get('banks', [])])
                 except FileNotFoundError:
                     print(colored(f"Category {category} not found", "red"))
                 except yaml.YAMLError as e:
@@ -62,12 +64,22 @@ class Trainer:
             question_text = question['language']['en']
         print(colored(f"Question: {question_text}", "white"))
 
-        user_input = input(colored("cling@cling:", "green") + colored("~/cling", "blue") + '$ ').strip()
+        user_input = input(
+            colored(
+                "cling@cling:",
+                "green") +
+            colored(
+                "~/cling",
+                "blue") +
+            '$ ').strip()
         if user_input in question["answers"]:
             print(colored("Correct!\n", "green"))
             self.correct_answers += 1
         else:
-            print(colored(f"Wrong! Correct answers: {', '.join(question['answers'])}\n", "red"))
+            print(
+                colored(
+                    f"Wrong! Correct answers: {', '.join(question['answers'])}\n",
+                    "red"))
 
         self.total_questions += 1
 
@@ -79,4 +91,7 @@ class Trainer:
         if self.correct_answers >= self.total_questions / 2:
             result_color = "green"
         os.system('clear')
-        print(colored(f"Your result: {self.correct_answers}/{self.total_questions} correct answers.", result_color))
+        print(
+            colored(
+                f"Your result: {self.correct_answers}/{self.total_questions} correct answers.",
+                result_color))
