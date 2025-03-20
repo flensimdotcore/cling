@@ -28,11 +28,12 @@ TODO release v1.0:
 - [ ] config files (preferences, e.g. used banks, amount of questions (yaml files inside usr/ dir))
 - [x] coloring in console
 - [ ] unit tests
-- [ ] ci pipeline
+- [x] ci pipeline
 - [ ] coverage calculation
 - [ ] license
-- [ ] restrict branch rules
+- [x] restrict branch rules
 - [ ] feature->dev->master branches flow
 - [ ] motivational phrases in result
 - [ ] questions ids in yaml
 - [ ] rework random question selection (create a list of questions with length=repeat from all selected banks)
+- [ ] pre-commit
